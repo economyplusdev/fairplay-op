@@ -1,0 +1,6 @@
+/node_modules
+/frontend/node_modules
+/frontend/.next
+/backend/rocksDB/LOCK
+/discord/node_modules
+/bedrock-protocol-master

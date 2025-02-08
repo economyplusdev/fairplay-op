@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Scrollbar container */
+.dropdown-scrollable {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #4b5563 #1f2937; /* Thumb and track colors */
+}
+
+/* For WebKit browsers (Chrome, Edge, Safari) */
+.dropdown-scrollable::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.dropdown-scrollable::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded edges for the thumb */
+}
+
+.dropdown-scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280; /* Thumb color on hover */
+}
+
+.dropdown-scrollable::-webkit-scrollbar-track {
+  background-color: #1f2937; /* Scrollbar track color */
+  border-radius: 4px; /* Rounded edges for the track */
+}
+
+
+/* Add this to your global CSS or a relevant CSS file */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s forwards;
+}
+
+.animate-slide-out {
+  animation: slide-out 0.5s forwards;
+}
